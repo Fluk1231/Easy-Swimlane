@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-size: 60px;
+        font-weight: bold;
+        margin-bottom: 1px;
+    }
+}
+
+#kanbanBoard {
+    display: flex;
+    column-gap: 24px;
+    padding: 48px;
+    height: 100%;
+    width: 100%;
+}
+
+.swimlane {
+    border: 1px solid black;
+    flex-basis: 1;
+    flex-shrink: 0;
+    flex-grow: 1;
+    background-color: #FFF8F8;
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 5px;
+        height: 60px;
+        background-color:#D4D2F2;
+    }
+}
+
+.card {
+    margin-top: 5px;
+    padding: 25px;
+    border-radius: 10px;
+
+    .toDo & {
+        background-color: #FCEE9E;
+    }
+
+    .inProgress & {
+        background-color:#92CEA8;
+    }
+
+    .done & {
+        color: #fff;
+        background-color: #2E3136
+    }
+
+    .hold & {
+        color: #fff;
+        background-color: rgb(170, 14, 14);
+    }
+}
+
+#dragged {
+    background: #F898A4;
+}
